@@ -172,7 +172,7 @@ namespace APM.SL.Test
 
             // Act & Assert
             var ex = Assert.Throws<ArgumentException>(() => product.CalculateMargin(cost, price));
-            Assert.Equal("Please enter the price (Parameter 'price')", ex.Message);
+            Assert.Equal("The price must be a number greater than 0 (Parameter 'price')", ex.Message);
         }
 
         [Fact]
@@ -199,7 +199,7 @@ namespace APM.SL.Test
             // Act & Assert
             var ex = Assert.Throws<ArgumentException>(() =>
                                         product.CalculateMargin(cost, price));
-            Assert.Equal("Please enter the price (Parameter 'price')", ex.Message);
+            Assert.Equal("The price must be a number greater than 0 (Parameter 'price')", ex.Message);
         }
 
         [Fact]
